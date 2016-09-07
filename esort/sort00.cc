@@ -101,7 +101,7 @@ const int kRecordSize = 100;
 int main(int argc, char* argv[])
 {
   bool kUseReadLine = false;
-  bool kSortDummyData = false;
+  bool kSortDummyData = true;
 
   {
     // set max virtual memory to 3GB.
@@ -173,8 +173,8 @@ int main(int argc, char* argv[])
   // output
   {
     OutputFile out("output");
-    for (std::vector<string>::iterator it = data.begin();
-        it != data.end();
+    for (std::vector<string>::iterator it = dummyData.begin();
+        it != dummyData.end();
         ++it)
     {
       out.writeLine(*it);
