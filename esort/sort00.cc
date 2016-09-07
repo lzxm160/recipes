@@ -110,16 +110,16 @@ int main(int argc, char* argv[])
     setrlimit(RLIMIT_AS, &rl);
   }
 
-  std::vector<int> dummyData;
+  std::vector<string> dummyData;
 
   if (kSortDummyData)
   {
     dummyData.resize(10000000);
-    for (std::vector<int>::iterator it = dummyData.begin();
+    for (std::vector<string>::iterator it = dummyData.begin();
         it != dummyData.end();
         ++it)
     {
-      *it = rand();
+      *it = static_cast<string>(rand());
     }
   }
 
